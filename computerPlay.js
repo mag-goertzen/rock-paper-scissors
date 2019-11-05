@@ -1,9 +1,10 @@
 function computerPlay() {
-    var myArray = [
+    let myArray = [
         "Rock",
         "Paper",
         "Scissors"
     ];
 
-    var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+    let randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+    return randomItem;
 }
