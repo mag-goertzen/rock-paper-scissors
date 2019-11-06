@@ -2,7 +2,7 @@ function game() {
 
     let games = [1,2,3,4,5];
     let gameResults = [];
-    let total;
+    let sum;
     let result;
     
     for (let i = 0; i < games.length; i++){
@@ -24,6 +24,6 @@ function game() {
         result = 'You lose!';
     };
 
-    return result, gameResults
+    return result
     
 }
