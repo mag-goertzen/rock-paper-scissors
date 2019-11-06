@@ -1,29 +1,38 @@
-function singleGame(playerSelection,computerSelection){
+function singleGame(playerSelection,computerSelection) {
 
-playerSelection = playerSelection.toUpperCase();
-computerSelection = computerSelection.toUpperCase();
 
-    if (playerSelection == computerSelection){
-        gameResult = 'Play again, you both chose '+ playerSelection;
-    
-    }elseif (playerSelection == 'ROCK' && computerSelection == 'SCISSORS'){
-        gameResult = 'You win!';
-    
-    }elseif (playerSelection == 'ROCK' && computerSelection == 'PAPER'){
-        gameResult = 'The computer wins! BOO!';
+playerSelection = playerSelection.toLowerCase();
+computerSelection = computerSelection.toLowerCase();
+let gameResult;
 
-    }elseif (playerSelection == 'SCISSORS' && computerSelection == 'PAPER'){
-        gameResult = 'You win!';
+    if (playerSelection === 'rock'){
+        if (computerSelection === 'scissors')
+        {gameResult = 'You win!';}
+        else if (computerSelection === 'paper')
+        {gameResult = 'The computer wins! BOO!';}
+        else 
+        {gameResult = 'Play again, you both chose '+ computerSelection;};
+    } else {}; 
 
-    }elseif (playerSelection == 'SCISSORS' && computerSelection == 'ROCK'){
-        gameResult = 'The computer wins! BOO!';
+    if (playerSelection === 'scissors'){
+        if (computerSelection === 'paper') 
+            {gameResult = 'You win!';}
+        else if (computerSelection === 'rock')
+            {gameResult = 'The computer wins! BOO!';}
+        else
+        {gameResult = 'Play again, you both chose '+ computerSelection;};
+    } else {}; 
 
-    }elseif (playerSelection == 'PAPER' && computerSelection == 'ROCK'){
-        gameResult = 'You win!';
-    
-    }else (playerSelection == 'PAPER' && computerSelection == 'SCISSORS'){
-        gameResult = 'The computer wins! BOO!';
-    }
- 
-    return gameResult;
+    if (playerSelection === 'paper'){
+        if (computerSelection === 'rock')
+            {gameResult = 'You win!';}
+        else if (computerSelection === 'scissors')
+            {gameResult = 'The computer wins! BOO!';} 
+        else 
+        {gameResult = 'Play again, you both chose '+ computerSelection;};
+    } else {};       
+        
+
+return gameResult;
 }
+
